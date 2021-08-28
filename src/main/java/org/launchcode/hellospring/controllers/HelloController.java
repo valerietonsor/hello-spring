@@ -23,7 +23,19 @@ public class HelloController {
     //handles requests of the form /hello?name=LaunchCode
     @RequestMapping(method = {RequestMethod.GET, RequestMethod.POST}, value = "hello") //handles post & get methods
     public static String createMessage(@RequestParam String name, @RequestParam String language){
-        return language + " " + name + "!";
+        String greeting = language + " " + name + "!";
+        String returned = "<html>" +
+                "<style>" +
+                "h1{color: white; text-align: center; outline: 2px solid black}" +
+                "div{background-color:  #3d3d5c;}" +
+                "</style>" +
+                "<body>" +
+                "<div>" +
+                "<h1>" + greeting + "</h1>" +
+                "</div>" +
+                "</body>" +
+                "</html>";
+        return returned;
     }
 
     //handles requests of the form /hello/LaunchCode
