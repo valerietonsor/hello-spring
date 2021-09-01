@@ -1,6 +1,7 @@
-
+package org.launchcode.hellospring.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -36,7 +37,7 @@ public class HelloController {
         return "Hello, " + name + "!";
     }
 
-    //lives @ /hello/form
+    //lives @ /form
     @GetMapping("form")
     public String helloForm() {
         return "form";
