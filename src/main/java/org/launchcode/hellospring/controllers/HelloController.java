@@ -1,4 +1,4 @@
-package org.launchcode.hellospring.controllers;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -36,18 +36,11 @@ public class HelloController {
         return "Hello, " + name + "!";
     }
 
-
+    //lives @ /hello/form
     @GetMapping("form")
-    @ResponseBody
     public String helloForm() {
-        return "<html>" +
-                "<body>" +
-                "<form action = 'hello' method = 'post'>" + // submit a request to /hello
-                "<input type = 'text' name = 'name' >" +
-                "<input type = 'submit' value = 'Greet Me!' >" +
-                "</form>" +
-                "</body>" +
-                "</html>";
+        return "form";
+
     }
 
 }
